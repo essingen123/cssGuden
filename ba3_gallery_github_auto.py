@@ -1,24 +1,20 @@
 import os
 
-output_file = 'README_gallery.md'
+output_file = 'README.md'
 image_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']
+image_path = 'img_trunk_junk'
 
-with open(output_file, 'w') as f:
-    f.write('# Image Gallery\n\n')
-    f.write('<div class="gallery">\n')
-    for i, file in enumerate((file for file in os.listdir() if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):
-        f.write(f'<img src="{file}" alt="{file}" class="img-rounded" style="width: 30%; margin: 1%; float: left; border-radius:50%;">\n')
+if not os.path.exists(image_path):
+    print(f"Error: Image directory '{image_path}' does not exist. Please create it and add your images.")
+    exit(1)
+
+with open(output_file, 'a') as f:
+    f.write('\n## Image Gallery\n\n')
+    f.write(f'Note: Images must be placed in the `{image_path}` directory.\n\n')
+    for i, file in enumerate((file for file in os.listdir(image_path) if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):
+        f.write(f'![]({image_path}/{file}){{:.img-rounded}}\n')
         if (i + 1) % 3 == 0:
-            f.write('<br>\n')
-    f.write('</div>\n')
+            f.write('\n')
+    f.write('\n')
 
-print(f'Readme file generated: {output_file}')
-
-
-'''
-<style>
-  .rounded-image {
-    border-radius: 50%;
-  }
-</style>
-'''
+print(f'Readme file updated: {output_file}')
