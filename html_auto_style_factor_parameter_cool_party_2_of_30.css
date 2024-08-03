@@ -209,3 +209,9 @@ hr {
     margin-bottom: 20px;
     padding-bottom: 20px;
 }
+
+
+
+hr + h2, hr + p {
+    column-span: all;
+  }
