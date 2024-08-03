@@ -28,7 +28,6 @@ body {
     font-size: 2.5em;
     line-height: 1.2;
     margin-bottom: 0.5em;
-    background: linear-gradient(to right, #f7dc6f, #ffd700);
     padding: 0.2em 0.5em;
     border-radius: 0.5em;
   }
@@ -37,7 +36,6 @@ body {
     font-size: 2em;
     line-height: 1.3;
     margin-bottom: 0.7em;
-    background: linear-gradient(to right, #87ceeb, #6495ed);
     padding: 0.2em 0.5em;
     border-radius: 0.5em;
   }
@@ -46,7 +44,6 @@ body {
     font-size: 1.8em;
     line-height: 1.4;
     margin-bottom: 0.9em;
-    background: linear-gradient(to right, #ffd700, #ffc107);
     padding: 0.2em 0.5em;
     border-radius: 0.5em;
   }
@@ -106,21 +103,3 @@ body {
     width: 25px;
   }
   
-  /* Add some emojis and fancy stuff 😊 */
-  h1::before {
-    content: "🔥";
-    font-size: 1.5em;
-    margin-right: 0.5em;
-  }
-  
-  h2::before {
-    content: "💡";
-    font-size: 1.2em;
-    margin-right: 0.5em;
-  }
-  
-  h3::before {
-    content: "📝";
-    font-size: 1.1em;
-    margin-right: 0.5em;
-  }
