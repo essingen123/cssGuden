@@ -76,12 +76,11 @@ Attribution is not required but appreciated. If you use AutoChic CSS in your pro
 v1.0: Initial release of AutoChic CSS aka cssGuden
 
 <br clear="left">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_17.jpg" style="width: 33%; margin: 0 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" style="width: 33%; margin: 0 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_11.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_2.jpg" style="width: 30%; margin: 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_17.jpg" style="width: 30%; margin: 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_9.jpg" style="width: 30%; margin: 1%; float: left;">
 <br clear="left">
-
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_2.jpg" style="width: 33%; margin: 0 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_3.jpg" style="width: 33%; margin: 0 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_9.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_3.jpg" style="width: 30%; margin: 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" style="width: 30%; margin: 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_11.jpg" style="width: 30%; margin: 1%; float: left;">
 <br clear="left">
