@@ -8,6 +8,8 @@ if not os.path.exists(image_path):
     print(f"Error: Image directory '{image_path}' does not exist. Please create it and add your images.")
     exit(1)
 
+print("## Image Gallery")
+
 with open(output_file, 'a') as f:
     f.write('\n## Image Gallery\n\n')
     for i, file in enumerate((file for file in os.listdir(image_path) if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):

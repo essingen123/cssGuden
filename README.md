@@ -72,6 +72,7 @@ Attribution is not required but appreciated. If you use AutoChic CSS in your pro
 
 v1.0: Initial release of AutoChic CSS aka cssGuden
 
+
 <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_18.jpg" style="width: 30%; margin: 1%; float: left; border-radius: 0.5em;">
 <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_1.jpg" style="width: 30%; margin: 1%; float: left; border-radius: 0.5em;">
 <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_7.jpg" style="width: 30%; margin: 1%; float: left; border-radius: 0.5em;">
