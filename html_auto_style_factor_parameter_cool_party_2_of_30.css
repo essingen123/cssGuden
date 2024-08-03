@@ -219,3 +219,8 @@ hr + h2, hr + p {
     column-span: all;
     margin-bottom: 40px;
   }
+
+
+  h2{
+    margin-top: 40px;
+  }
