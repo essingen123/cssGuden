@@ -88,3 +88,11 @@ Happy styling!
 <img src="party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_4.jpg" alt="party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_4.jpg" class="img-rounded" style="width: 30%; margin: 1%; float: left; border-radius:50%;">
 <br>
 </div>
+<style>
+  .rounded-image {
+    border-radius: 50%;
+  }
+  .img-rounded {
+    border-radius: 50%;
+  }
+</style>
