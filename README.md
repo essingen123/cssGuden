@@ -7,21 +7,26 @@
 
 When designing AutoChic CSS, we asked ourselves:
 
+
 ### Who is our target audience?
 
 Web developers, designers, and anyone looking to create a visually appealing web application.
+
 
 ### What are their needs and pain points?
 
 A easy-to-use CSS library that can help them create a modern and responsive design without having to start from scratch.
 
+
 ### What are the current trends and best practices in web design?
 
 Modular and flexible design, responsive design, and a focus on user experience.
 
+
 ### How can we create a CSS library that meets these needs and exceeds expectations?
 
 By providing a comprehensive and modular CSS architecture, pre-designed components and layouts, and a focus on ease of use and customization.
+
 
 ## Design Principles
 ------------------
@@ -33,15 +38,15 @@ By providing a comprehensive and modular CSS architecture, pre-designed componen
 ## Features
 ---------
 
-### Responsive design for various screen sizes and devices
+- Responsive design for various screen sizes and devices
 
-### Modular CSS architecture for easy customization
+- Modular CSS architecture for easy customization
 
-### Pre-designed components and layouts for common use cases
+- Pre-designed components and layouts for common use cases
 
-### Easy to use and integrate into your web projects
+- Easy to use and integrate into your web projects
 
-## Getting Started
+- Getting Started
 ---------------
 
 1. **Link the AutoChic CSS file to your HTML document**
@@ -70,8 +75,13 @@ Attribution is not required but appreciated. If you use AutoChic CSS in your pro
 
 v1.0: Initial release of AutoChic CSS aka cssGuden
 
-<br>
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_17.jpg" style="width: 30%; margin: 1%; float: left;"><img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" style="width: 30%; margin: 1%; float: left;"><img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_11.jpg" style="width: 30%; margin: 1%; float: left;">
-<br>
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_2.jpg" style="width: 30%; margin: 1%; float: left;"><img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_3.jpg" style="width: 30%; margin: 1%; float: left;"><img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_9.jpg" style="width: 30%; margin: 1%; float: left;">
-<br>
+<br clear="left">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_17.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_11.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<br clear="left">
+
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_2.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_3.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_9.jpg" style="width: 33%; margin: 0 1%; float: left;">
+<br clear="left">
