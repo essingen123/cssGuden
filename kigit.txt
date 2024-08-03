@@ -14,7 +14,7 @@ set303b=cssGuden
 set303c=public
 
 # auto generate HTML page, y for yes and n for no
-set303d=y
+set303d=n
 
 # tags, separated by commas
 set303e=Git, Bash, Automation, Automagic, un-PEP8-perhaps
