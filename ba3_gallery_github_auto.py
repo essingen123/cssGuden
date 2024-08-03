@@ -10,11 +10,10 @@ if not os.path.exists(image_path):
 
 with open(output_file, 'a') as f:
     f.write('\n## Image Gallery\n\n')
-    f.write(f'Note: Images must be placed in the `{image_path}` directory.\n\n')
     for i, file in enumerate((file for file in os.listdir(image_path) if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):
-        f.write(f'![]({image_path}/{file}){{:.img-rounded}}\n')
+        f.write(f'<img src="{image_path}/{file}" style="width: 30%; margin: 1%; float: left; border-radius: 0.5em;">\n')
         if (i + 1) % 3 == 0:
-            f.write('\n')
+            f.write('<br>\n')
     f.write('\n')
 
 print(f'Readme file updated: {output_file}')
