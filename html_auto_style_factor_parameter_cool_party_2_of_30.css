@@ -214,4 +214,5 @@ hr {
 
 hr + h2, hr + p {
     column-span: all;
+    margin-bottom: 40px;
   }
