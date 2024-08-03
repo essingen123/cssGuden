@@ -114,7 +114,10 @@ h1:first-child {
       }
 
     h2 {
-        column-span: all}
+        column-span: all;
+    
+    top-margin:50px;
+}
     
 
   h1 {
