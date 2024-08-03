@@ -220,4 +220,5 @@ hr + h2, hr + p {
   h2 {
     font-size: 1.5em;
     margin-top: 40px !important;
+    clear:both;
 }
