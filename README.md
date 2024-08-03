@@ -26,11 +26,9 @@ By providing a comprehensive and modular CSS architecture, pre-designed componen
 ## Design Principles
 ------------------
 
-### Create a visually appealing and modern design that enhances the user experience
-
-### Use a modular and flexible approach to make the library easy to customize and extend
-
-### Focus on simplicity and ease of use, while still providing advanced features and functionality
+- Create a visually appealing and modern design that enhances the user experience
+- Use a modular and flexible approach to make the library easy to customize and extend
+- Focus on simplicity and ease of use, while still providing advanced features and functionality
 
 ## Features
 ---------
