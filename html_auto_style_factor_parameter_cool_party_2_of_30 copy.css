@@ -222,3 +222,58 @@ hr + h2, hr + p {
     margin-top: 40px !important;
     clear:both;
 }
+
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #fff;
+  position: relative;
+  overflow: hidden;
+}
+
+body {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(45deg, #03A9F4, #2196F3, #03A9F4);
+  border-image-slice: 1;
+  animation: rotate 10s linear infinite;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 1px solid transparent;
+  border-image-source: linear-gradient(45deg, #03A9F4, #2196F3, #03A9F4);
+  border-image-slice: 1;
+  animation: shimmer 2s linear infinite;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 0.5;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.5;
+  }
+}
