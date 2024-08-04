@@ -3,7 +3,7 @@
 body {
   font-family: 'Merriweather', serif;
   font-size: smaller;
-  margin: 4em auto 4em auto;
+  margin: 4em auto;
   background-color: #f4f4f4;
   justify-content: center;
   min-height: 100vh;
@@ -12,8 +12,7 @@ body {
   box-sizing: border-box;
   text-align: justify;
   letter-spacing: 0.5px;
-  border: 0.125px solid transparent;
-  border-radius: 32px !important;
+  border-radius: 32px;
   grid-template-columns: repeat(3, 1fr);
   align-items: start;
   animation: shimmer2 20s linear infinite;
@@ -26,23 +25,29 @@ body {
 }
 
 * {
+  font-family: 'Merriweather', serif;
+  font-size: 16px;
+  color: #333;
   text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.025), 0 -3px 8px rgba(37, 34, 26, 0.25), 0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.3);
+  
+  text-shadow: 0 -1px 3px rgba(37, 34, 26, 0.573), 0 -3px 8px rgba(37, 34, 26, 0.25), 0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.3);
   opacity: 0.98;
-  color: #25241d;
   font-weight: 200;
-  font-size: 105%;
+  clip-path: none;
+  overflow: visible;
 }
 
-h1, h2, h3 {
+h1,
+h2,
+h3 {
   margin: 1.5em 0 0.5em 0;
   color: #232221;
-  text-shadow: 0 -1px 3px rgba(37, 34, 26, 0.089),
-    0 -1px 20px rgba(21, 20, 19, 0.204),
-    0 -1px 10px rgba(56, 54, 51, 0.25);
+  text-shadow: 0 -1px 3px rgba(37, 34, 26, 0.089), 0 -1px 20px rgba(21, 20, 19, 0.204), 0 -1px 10px rgba(56, 54, 51, 0.25);
   font-weight: 600;
   font-style: oblique;
   opacity: 0.9;
   transition: color 0.3s ease, transform 0.3s ease;
+  animation: text-shimmer 3s infinite;
 }
 
 h1 {
@@ -51,10 +56,8 @@ h1 {
   margin-bottom: 0.5em;
   font-variant: petite-caps;
   text-align: center;
-  margin: 0 auto 58px auto !important;
+  margin: 0 auto 58px auto;
   padding-top: 60px;
-  text-align: justify;
-  text-align: center;
   max-width: 500px;
   transform: rotate3d(-.2, -1.4, 21.2, 349deg);
   letter-spacing: 8px;
@@ -66,28 +69,19 @@ h2 {
   line-height: 1.3;
   margin-bottom: 0.7em;
   font-variant: normal;
-  margin-top: 80px !important;
+  margin-top: 80px;
   clear: both;
+  column-span: all;
+  grid-column: 1 / -1;
+  margin-top: 128px !important;
+  margin-left: 0;
 }
 
 h3 {
   font-size: 1.1em;
   line-height: 1.4;
-  margin-bottom: 0.9em;
+  margin-bottom: 1.9em;
   margin-top: 0;
-}
-
-ul {
-  text-align: justify;
-  list-style-position: outside;
-  padding: 0.25em 0 0 1.25em;
-  transition: color 0.3s ease;
-}
-
-li {
-  margin: 0.1em 0.1em 0.1em 0.1em;
-  padding: 0;
-  text-align: left;
 }
 
 img {
@@ -106,16 +100,21 @@ center {
 }
 
 center img {
+float: none !important;
+clear: both !important;
   grid-column: 1 / -1;
   height: auto;
-  margin: 0 auto;
+  margin: 0 auto 0 auto !important;
+  min-width: 120px;
   display: block;
   border-radius: 50%;
-  box-shadow: 0 2px 24px rgba(57, 54, 52, 0.371);
+  box-shadow: 1px 2px 3px rgba(73, 43, 94, 0.66);
   flex-grow: 1;
   width: 100%;
   max-width: 100%;
   transform: translateX(0) rotate(10deg);
+  overflow: auto;
+  padding: 12px;
 }
 
 p {
@@ -126,6 +125,7 @@ p {
   break-inside: avoid-column;
   margin-bottom: 40px;
   transition: color 0.3s ease;
+  animation: text-shimmer 3s infinite;
 }
 
 hr {
@@ -133,7 +133,8 @@ hr {
   padding-bottom: 20px;
 }
 
-hr+h2, hr+p {
+hr+h2,
+hr+p {
   column-span: all;
   grid-column: 1 / -1;
   margin-bottom: 40px;
@@ -144,29 +145,40 @@ hr+h2, hr+p {
 html {
   background-image: linear-gradient(135deg, rgba(68, 68, 68, 0.221), #66666612);
   background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
+  animation: gradient 50s ease infinite;
   background-attachment: fixed;
   background-position: center;
+  scroll-behavior: smooth;
 }
 
-hr + * {
-  display: grid !important;
-  grid-template-rows: repeat(auto-fill, minmax(0, 1fr)) !important;
+hr+* {
+  display: grid;
+  grid-template-rows: repeat(auto-fill, minmax(0, 1fr));
 }
 
-/* Two-column layout */
+hr::before {
+  content: " ";
+  width: 100%;
+  background-color: rgba(143, 143, 143, 0.541);
+}
+
+html {padding:14px;
+}
 @media (min-width: 900px) {
   body {
     column-count: 3;
     column-gap: 58px;
   }
-}
+} 
 
-ul+h2, ul+h3 {
+ul+h2,
+ul+h3 {
   margin-top: 2em;
 }
 
-h1::before, h2::before, h3::before {
+h1::before,
+h2::before,
+h3::before {
   content: "";
   display: block;
   height: 0;
@@ -203,29 +215,10 @@ h2+hr {
   grid-column: 1 / -1;
 }
 
-h2 {
-  column-span: all;
-  grid-column: 1 / -1;
-  margin-top: 50px;
-}
-
-/* Additional enhancements */
-body {
-  background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
-  transition: all 0.3s ease;
-}
-
-h1, h2, h3 {
-  transition: color 0.3s ease, transform 0.3s ease;
-}
-
-h1:hover, h2:hover, h3:hover {
+h1:hover,
+h2:hover,
+h3:hover {
   color: #3b293a;
-  transform: scale(1.05);
-}
-
-p {
-  transition: color 0.3s ease;
 }
 
 p:hover {
@@ -234,85 +227,27 @@ p:hover {
 
 ul {
   transition: color 0.3s ease;
+  margin-top: 0;
+  padding-top: 0;
+  margin-bottom: 20px;
+  display: grid !important;
+  grid-template-rows: repeat(auto-fill, minmax(0, 1fr)) !important;
+  grid-auto-flow: dense;
+  text-align: justify;
+  list-style-position: outside;
+  padding: 0 0 0 1.25em;
+  padding-top: 0;
 }
 
 ul:hover {
   color: #3b293a;
 }
 
-img {
-  transition: transform 0.3s ease;
-}
-
-img:hover {
-  transform: scale(1.05);
-}
-
-/* Smooth scrolling */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Subtle text animation */
-@keyframes text-shimmer {
-  0% {
-    text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.025), 0 -1px 8px rgba(37, 34, 26, 0.125),
-    0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.08);
-  }
-  50% {
-    text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.05), 0 -1px 8px rgba(37, 34, 26, 0.2),
-    0 -1px 8px rgba(37, 34, 26, 0.1), 0 -1px 1px rgba(37, 34, 26, 0.1);
-  }
-  100% {
-    text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.025), 0 -1px 8px rgba(37, 34, 26, 0.125),
-    0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.08);
-  }
-}
-
-h1, h2, h3, p, ul, li {
-  animation: text-shimmer 3s infinite;
-}
-
-/* Additional hover effects */
-h1:hover, h2:hover, h3:hover, p:hover, ul:hover, li:hover {
-  text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.05), 0 -1px 8px rgba(37, 34, 26, 0.2),
-    0 -1px 8px rgba(37, 34, 26, 0.1), 0 -1px 1px rgba(37, 34, 26, 0.1);
-}
-
-/* Subtle background animation */
-@keyframes gradient {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
-
-html {
-  background-image: linear-gradient(135deg, rgba(68, 68, 68, 0.221), #66666612);
-  background-size: 400% 400%;
-  animation: gradient 10s ease infinite;
-  background-attachment: fixed;
-  background-position: center;
-}
-
-/* Additional hover effects */
-h1:hover, h2:hover, h3:hover, p:hover, ul:hover, li:hover {
-  text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.05), 0 -1px 8px rgba(37, 34, 26, 0.2),
-    0 -1px 8px rgba(37, 34, 26, 0.1), 0 -1px 1px rgba(37, 34, 26, 0.1);
-}
-
-/* Enhanced image hover effect */
 img:hover {
   transform: scale(1.05) rotate(5deg);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Enhanced link hover effect */
 a {
   color: inherit;
   text-decoration: none;
@@ -325,7 +260,6 @@ a:hover {
     0 -1px 8px rgba(37, 34, 26, 0.1), 0 -1px 1px rgba(37, 34, 26, 0.1);
 }
 
-/* Enhanced button styling */
 button {
   background-color: #3b293a;
   color: #fff;
@@ -341,8 +275,9 @@ button:hover {
   transform: scale(1.05);
 }
 
-/* Enhanced form input styling */
-input[type="text"], input[type="email"], input[type="password"] {
+input[type="text"],
+input[type="email"],
+input[type="password"] {
   width: 100%;
   padding: 10px;
   margin: 10px 0;
@@ -351,18 +286,18 @@ input[type="text"], input[type="email"], input[type="password"] {
   transition: border-color 0.3s ease;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, input[type="password"]:focus {
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus {
   border-color: #3b293a;
 }
 
-/* Enhanced form label styling */
 label {
   font-weight: bold;
   margin-bottom: 5px;
   display: block;
 }
 
-/* Enhanced form submit button styling */
 input[type="submit"] {
   background-color: #3b293a;
   color: #fff;
@@ -378,7 +313,6 @@ input[type="submit"]:hover {
   transform: scale(1.05);
 }
 
-/* Enhanced form styling */
 form {
   max-width: 400px;
   margin: 0 auto;
@@ -389,7 +323,6 @@ form {
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
-/* Enhanced footer styling */
 footer {
   text-align: center;
   padding: 20px;
@@ -398,7 +331,6 @@ footer {
   font-size: 0.9em;
 }
 
-/* Enhanced footer link styling */
 footer a {
   color: #fff;
   text-decoration: none;
@@ -409,18 +341,6 @@ footer a:hover {
   color: #5c405a;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-/* Fancy border animation */
 body::before {
   content: ' ';
   position: absolute;
@@ -428,23 +348,15 @@ body::before {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border: 1px solid transparent;
+  border: 6px solid transparent;
   border-image: linear-gradient(45deg, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF) 1;
-  animation: border-rotate2 5s linear infinite;
+  animation: border-rotate2 15s ease-in-out infinite;
   z-index: -1;
-  clip-path:stroke-box;
-  border-radius: 48px;
-  opacity: 0.5;
+  clip-path: stroke-box;
+  border-radius: 36px;
+  opacity: 0.2;
+  clip-path: border-box;
 }
-
-
-
-
-
-
-
-
-
 
 @keyframes rotate {
   0% {
@@ -488,52 +400,110 @@ body::before {
   0% {
     background-position: 0% 50%;
   }
+
   50% {
     background-position: 100% 50%;
   }
+
   100% {
     background-position: 0% 50%;
   }
 }
 
-
-
-ul {
-  margin-top: 0;
-  padding-top: 0;
-  margin-bottom: 20px;
-
-
-
-
-  display: grid !important;
-  grid-template-rows: repeat(auto-fill, minmax(0, 1fr)) !important;
-
-  
-  grid-auto-flow: dense;
-  
-}
-
-
-
 li {
   margin-top: 0;
   padding-top: 0;
   margin-bottom: 20px;
+  break-inside: avoid-column;
+  margin: 0 0.1em 0.1em 0.1em;
+  padding: 0;
+  text-align: left;
+  animation: text-shimmer 3s infinite;
+}
 
+h2~hr~* {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+h2~hr~*~h2 {
+  display: block;
+}
+
+ol {
+  padding-top: 0;
+  margin-top: 0;
+}
+
+html::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: #3e513f39;
+  opacity: 1;
+  transition: opacity 0.5s;
+  animation: fadeOut 1s forwards;
+  animation-delay: 1s;
+}
+
+html::after {
+  content: " ";
+  position: fixed;
+  top: -100%;
+  left: -70%;
+  width: 200%;
+  height: 300vh;
+  background-color: #d9d9d9e4;
+  transform: rotate(-105deg);
+  animation: resetOverflow 1s forwards, overlayoff 1s forwards;
+  animation-delay: .5s;
+}
+
+@keyframes fadeOut {
+  to {
+    opacity: 0;
+  }
+}
+
+@keyframes resetOverflow {
+  to {
+    html {
+      overflow: auto;
+    }
+  }
+}
+
+@keyframes overlayoff {
+  0% {}
+
+  100% {
+    margin-left: 300%;
+    margin-top: -100%;
+  }
 }
 
 
 
 
-@import url('https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
-
-* {
-  font-family: 'Merriweather', serif;
-  font-size: 16px;
-  color: #333;
+html {
+  filter: invert(1) hue-rotate(180deg);
 }
 
+html img{
+  filter: invert(1) hue-rotate(180deg);
+}
+html {
+  transition: color 300ms, background-color 300ms;
+}
+
+html {
+  background-image: linear-gradient(135deg, rgb(255 255 255 / 97%), #dddbe7e8);
+ 
+  opacity: 1;
+}
 
 body::before {
   content: ' ';
@@ -542,17 +512,23 @@ body::before {
   left: -4px;
   right: -4px;
   bottom: -4px;
-  border: 6px solid transparent;
+  border: 2px solid transparent;
   border-image: linear-gradient(45deg, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF) 1;
   animation: border-rotate2 5s linear infinite;
   z-index: -1;
   clip-path: stroke-box;
-  border-radius: 36px;
-  opacity: 0.2;
-  clip-path: border-box;
+  border-radius: 178px;
+  opacity: 1;
 }
 
-
-
-
-
+hr::before {
+  content: " ";
+  width: 100%;
+  background-color: rgba(143, 143, 143, 0.035);
+  height: 50px;
+  margin-top: -50px;
+  width: auto;
+  overflow: hidden;
+  margin: -48px -74px -6px -74px;
+  padding: 0 0 0 0;
+}
