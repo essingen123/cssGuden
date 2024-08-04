@@ -17,10 +17,10 @@ set303c=public
 set303d=n
 
 # tags, separated by commas
-set303e=Git, Bash, Automation, Automagic, un-PEP8-perhaps
+set303e=Auto CSS, HTML Core Design Elements
 
 # description
-set303f=A work in progress with automation testing for Git leveraging python, bash etc
+set303f=Ambitious name with a pinch of salt .. planets
 
 # website URL
 set303g=https://essingen123.github.io/cssGuden

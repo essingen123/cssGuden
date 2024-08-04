@@ -1,0 +1,224 @@
+[
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "Image",
+        "importPath": "PIL",
+        "description": "PIL",
+        "isExtraImport": true,
+        "detail": "PIL",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
+        "documentation": {}
+    },
+    {
+        "label": "http.server",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "http.server",
+        "description": "http.server",
+        "detail": "http.server",
+        "documentation": {}
+    },
+    {
+        "label": "webbrowser",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "webbrowser",
+        "description": "webbrowser",
+        "detail": "webbrowser",
+        "documentation": {}
+    },
+    {
+        "label": "socket",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "socket",
+        "description": "socket",
+        "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "stuff.auto_gallery_zero_a",
+        "description": "stuff.auto_gallery_zero_a",
+        "peekOfCode": "output_file = 'README_IMG_EXAMPLE.md'\n# Set the image formats\nimage_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\n# Create a list to store the image files\nimage_files = []\n# Loop through all files in the current directory\nfor file in os.listdir():\n    # Check if the file has one of the specified formats\n    for format in image_formats:\n        if file.lower().endswith('.' + format):",
+        "detail": "stuff.auto_gallery_zero_a",
+        "documentation": {}
+    },
+    {
+        "label": "image_formats",
+        "kind": 5,
+        "importPath": "stuff.auto_gallery_zero_a",
+        "description": "stuff.auto_gallery_zero_a",
+        "peekOfCode": "image_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\n# Create a list to store the image files\nimage_files = []\n# Loop through all files in the current directory\nfor file in os.listdir():\n    # Check if the file has one of the specified formats\n    for format in image_formats:\n        if file.lower().endswith('.' + format):\n            image_files.append(file)\n            break",
+        "detail": "stuff.auto_gallery_zero_a",
+        "documentation": {}
+    },
+    {
+        "label": "image_files",
+        "kind": 5,
+        "importPath": "stuff.auto_gallery_zero_a",
+        "description": "stuff.auto_gallery_zero_a",
+        "peekOfCode": "image_files = []\n# Loop through all files in the current directory\nfor file in os.listdir():\n    # Check if the file has one of the specified formats\n    for format in image_formats:\n        if file.lower().endswith('.' + format):\n            image_files.append(file)\n            break\n# Create the README.md file\nwith open(output_file, 'w') as f:",
+        "detail": "stuff.auto_gallery_zero_a",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "stuff.readme_gal2",
+        "description": "stuff.readme_gal2",
+        "peekOfCode": "output_file = 'README_gallery.md'\nimage_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\nwith open(output_file, 'w') as f:\n    f.write('# Image Gallery\\n\\n<div class=\"gallery\">\\n')\n    for file in (file for file in os.listdir() if any(file.lower().endswith('.' + fmt) for fmt in image_formats)):\n        img = Image.open(file)\n        img.thumbnail((int(img.width * 0.33), int(img.height * (img.width * 0.33) / img.width)))\n        img.save(file)\n        f.write(f'<img src=\"{file}\" alt=\"{file}\" class=\"img-rounded\" style=\"width: 30%; margin: 1%; float: left;\">\\n')\n        if (list(os.listdir()).index(file) + 1) % 3 == 0:",
+        "detail": "stuff.readme_gal2",
+        "documentation": {}
+    },
+    {
+        "label": "image_formats",
+        "kind": 5,
+        "importPath": "stuff.readme_gal2",
+        "description": "stuff.readme_gal2",
+        "peekOfCode": "image_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\nwith open(output_file, 'w') as f:\n    f.write('# Image Gallery\\n\\n<div class=\"gallery\">\\n')\n    for file in (file for file in os.listdir() if any(file.lower().endswith('.' + fmt) for fmt in image_formats)):\n        img = Image.open(file)\n        img.thumbnail((int(img.width * 0.33), int(img.height * (img.width * 0.33) / img.width)))\n        img.save(file)\n        f.write(f'<img src=\"{file}\" alt=\"{file}\" class=\"img-rounded\" style=\"width: 30%; margin: 1%; float: left;\">\\n')\n        if (list(os.listdir()).index(file) + 1) % 3 == 0:\n            f.write('<br>\\n')",
+        "detail": "stuff.readme_gal2",
+        "documentation": {}
+    },
+    {
+        "label": "readme_content",
+        "kind": 5,
+        "importPath": "stuff2.READMEmd_gen_this",
+        "description": "stuff2.READMEmd_gen_this",
+        "peekOfCode": "readme_content = \"\"\"\nautoChic CSS: The Ultimate CSS Library for Any Web Application\nDesign Process\n---------------\nWhen designing autoChic CSS, we asked ourselves:\n### Who is our target audience?\nWeb developers, designers, and anyone looking to create a visually appealing web application\n### What are their needs and pain points?\nA easy-to-use CSS library that can help them create a modern and responsive design without having to start from scratch\n### What are the current trends and best practices in web design?",
+        "detail": "stuff2.READMEmd_gen_this",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "stuff2.redme_gal",
+        "description": "stuff2.redme_gal",
+        "peekOfCode": "output_file = 'README.md'\n# Set the image formats\nimage_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\n# Create a list to store the image files\nimage_files = []\n# Loop through all files in the current directory\nfor file in os.listdir():\n    # Check if the file has one of the specified formats\n    for format in image_formats:\n        if file.lower().endswith('.' + format):",
+        "detail": "stuff2.redme_gal",
+        "documentation": {}
+    },
+    {
+        "label": "image_formats",
+        "kind": 5,
+        "importPath": "stuff2.redme_gal",
+        "description": "stuff2.redme_gal",
+        "peekOfCode": "image_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\n# Create a list to store the image files\nimage_files = []\n# Loop through all files in the current directory\nfor file in os.listdir():\n    # Check if the file has one of the specified formats\n    for format in image_formats:\n        if file.lower().endswith('.' + format):\n            image_files.append(file)\n            break",
+        "detail": "stuff2.redme_gal",
+        "documentation": {}
+    },
+    {
+        "label": "image_files",
+        "kind": 5,
+        "importPath": "stuff2.redme_gal",
+        "description": "stuff2.redme_gal",
+        "peekOfCode": "image_files = []\n# Loop through all files in the current directory\nfor file in os.listdir():\n    # Check if the file has one of the specified formats\n    for format in image_formats:\n        if file.lower().endswith('.' + format):\n            image_files.append(file)\n            break\n# Create the README.md file\nwith open(output_file, 'w') as f:",
+        "detail": "stuff2.redme_gal",
+        "documentation": {}
+    },
+    {
+        "label": "delete_duplicates",
+        "kind": 2,
+        "importPath": "ba1_duplicate_deleter",
+        "description": "ba1_duplicate_deleter",
+        "peekOfCode": "def delete_duplicates(directory=\".\"):\n    files = [f for f in os.listdir(directory) if os.path.isfile(os.path.join(directory, f))]\n    file_sizes = {}\n    for file in files:\n        file_path = os.path.join(directory, file)\n        file_size = os.path.getsize(file_path)\n        if file_size in file_sizes:\n            file_sizes[file_size].append(file_path)\n        else:\n            file_sizes[file_size] = [file_path]",
+        "detail": "ba1_duplicate_deleter",
+        "documentation": {}
+    },
+    {
+        "label": "rename_jpeg_files",
+        "kind": 2,
+        "importPath": "ba2_jpeg_file_renamer_lazy",
+        "description": "ba2_jpeg_file_renamer_lazy",
+        "peekOfCode": "def rename_jpeg_files(directory=\".\"):\n    files = [f for f in os.listdir(directory) if f.lower().endswith('.jpg') or f.lower().endswith('.jpeg')]\n    base_name = \"party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_\"\n    for i, file in enumerate(files):\n        file_path = os.path.join(directory, file)\n        new_name = f\"{base_name}{i+1}.jpg\"\n        os.rename(file_path, os.path.join(directory, new_name))\nif __name__ == \"__main__\":\n    if len(sys.argv) > 1:\n        rename_jpeg_files(sys.argv[1])",
+        "detail": "ba2_jpeg_file_renamer_lazy",
+        "documentation": {}
+    },
+    {
+        "label": "output_file",
+        "kind": 5,
+        "importPath": "ba3_gallery_github_auto",
+        "description": "ba3_gallery_github_auto",
+        "peekOfCode": "output_file = 'README.md'\nimage_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\nimage_path = 'img_trunk_junk'\nif not os.path.exists(image_path):\n    print(f\"Error: Image directory '{image_path}' does not exist. Please create it and add your images.\")\n    exit(1)\nprint(\"## Image Gallery\")\nwith open(output_file, 'a') as f:\n    f.write('\\n## Image Gallery\\n\\n')\n    for i, file in enumerate((file for file in os.listdir(image_path) if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):",
+        "detail": "ba3_gallery_github_auto",
+        "documentation": {}
+    },
+    {
+        "label": "image_formats",
+        "kind": 5,
+        "importPath": "ba3_gallery_github_auto",
+        "description": "ba3_gallery_github_auto",
+        "peekOfCode": "image_formats = ['jpg', 'jpeg', 'gif', 'webp', 'png']\nimage_path = 'img_trunk_junk'\nif not os.path.exists(image_path):\n    print(f\"Error: Image directory '{image_path}' does not exist. Please create it and add your images.\")\n    exit(1)\nprint(\"## Image Gallery\")\nwith open(output_file, 'a') as f:\n    f.write('\\n## Image Gallery\\n\\n')\n    for i, file in enumerate((file for file in os.listdir(image_path) if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):\n        f.write(f'<img src=\"{image_path}/{file}\" style=\"width: 30%; margin: 1%; float: left; border-radius: 0.5em;\">\\n')",
+        "detail": "ba3_gallery_github_auto",
+        "documentation": {}
+    },
+    {
+        "label": "image_path",
+        "kind": 5,
+        "importPath": "ba3_gallery_github_auto",
+        "description": "ba3_gallery_github_auto",
+        "peekOfCode": "image_path = 'img_trunk_junk'\nif not os.path.exists(image_path):\n    print(f\"Error: Image directory '{image_path}' does not exist. Please create it and add your images.\")\n    exit(1)\nprint(\"## Image Gallery\")\nwith open(output_file, 'a') as f:\n    f.write('\\n## Image Gallery\\n\\n')\n    for i, file in enumerate((file for file in os.listdir(image_path) if any(file.lower().endswith('.' + fmt) for fmt in image_formats))):\n        f.write(f'<img src=\"{image_path}/{file}\" style=\"width: 30%; margin: 1%; float: left; border-radius: 0.5em;\">\\n')\n        if (i + 1) % 3 == 0:",
+        "detail": "ba3_gallery_github_auto",
+        "documentation": {}
+    },
+    {
+        "label": "readme_content",
+        "kind": 5,
+        "importPath": "ba4_readme_text_gen_here",
+        "description": "ba4_readme_text_gen_here",
+        "peekOfCode": "readme_content = \"\"\"\n# AutoChic CSS: The Ultimate CSS Library for Any Web Application\n==============================================================\n## Design Process\n---------------\nWhen designing AutoChic CSS, we asked ourselves:\n### Who is our target audience?\nWeb developers, designers, and anyone looking to create a visually appealing web application.\n### What are their needs and pain points?\nA easy-to-use CSS library that can help them create a modern and responsive design without having to start from scratch.",
+        "detail": "ba4_readme_text_gen_here",
+        "documentation": {}
+    },
+    {
+        "label": "PORT",
+        "kind": 5,
+        "importPath": "local_server",
+        "description": "local_server",
+        "peekOfCode": "PORT = 8082  # Start from this port\n# Find a free port\nwhile True:\n    try:\n        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        sock.settimeout(1)\n        print(f\"Trying port: {PORT}\")\n        print(f\"Found free port: {PORT}\")\n        sock.close()  # Close the socket\n        break",
+        "detail": "local_server",
+        "documentation": {}
+    },
+    {
+        "label": "httpd",
+        "kind": 5,
+        "importPath": "local_server",
+        "description": "local_server",
+        "peekOfCode": "httpd = http.server.HTTPServer((\"\", PORT), http.server.SimpleHTTPRequestHandler)\nprint(f\"Server started on port {PORT}\")\n# Open the browser to the server\nwebbrowser.open(f\"http://localhost:{PORT}\")\n# Keep the server running\nhttpd.serve_forever()",
+        "detail": "local_server",
+        "documentation": {}
+    }
+]
