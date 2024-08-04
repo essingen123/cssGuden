@@ -166,7 +166,7 @@ hr::before {
 
 html {padding:14px;
 }
-@media screen and (min-width: 600px) {
+@media screen and (min-width: 900px) {
 
   body {
     column-count: 3;
