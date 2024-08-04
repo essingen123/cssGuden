@@ -543,4 +543,11 @@ hr::before {
   body {
       column-count: 1;
   }
+  *,html,body {
+    font-size: large;
+  }
+  body * {
+    padding-left: 46px;
+    padding-right: 46px;
+  }
 }
