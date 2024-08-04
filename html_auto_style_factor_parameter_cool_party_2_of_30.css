@@ -166,13 +166,7 @@ hr::before {
 
 html {padding:14px;
 }
-@media screen and (min-width: 900px) {
 
-  body {
-    column-count: 3;
-    column-gap: 58px;
-  }
-} 
 
 ul+h2,
 ul+h3 {
@@ -536,3 +530,12 @@ hr::before {
   margin: -48px -74px -6px -74px;
   padding: 0 0 0 0;
 }
+
+
+@media screen and (min-width: 900px) {
+
+  body {
+    column-count: 3;
+    column-gap: 58px;
+  }
+} 
