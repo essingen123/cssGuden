@@ -220,3 +220,60 @@ hr + h2, hr + p {
   font-size: 115%;
   font-style: italic;
 }
+
+
+
+
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+body {
+  top: 0;
+  left: 0;
+  width: 100%;
+  border: 0.125px solid transparent;
+  border-image-source: linear-gradient(45deg, #03a8f437, #21f3755e, #03a8f400);
+  border-image-slice: 1;
+  animation: shimmer2 20s linear infinite;
+}
+
+@keyframes shimmer2 {
+  0% {
+    opacity: 0.85;
+  }
+  10% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.85;
+  }
+}
+
+
+
+
+
+body {
+  border: 0.5px solid transparent;
+  border-image-slice: 1;
+  animation: border-rotate2 2s ease-in-out infinite;
+}
+
+@keyframes border-rotate2 {
+  0% {
+    border-image-source: linear-gradient(45deg, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF);
+  }
+  50% {
+    border-image-source: linear-gradient(224deg, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF);
+  }
+  100% {
+    border-image-source: linear-gradient(404deg, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF);
+  }
+}
