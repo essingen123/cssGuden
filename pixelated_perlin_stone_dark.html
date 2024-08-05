@@ -138,23 +138,32 @@
       font-family: Georgia, 'Times New Roman', Times, serif;
 
     }
-
     .mobile-circle {
-      text-align: center;
-      padding: 30px;
-      background-color: #fff !important;
-      color: #000 !important;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      overflow: hidden;
-      font-size: large;
+  text-align: center;
+  padding: 30px;
+  background-color: #fff !important;
+  color: #000 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+  font-size: large;
+  overflow-y: auto;
+  position: relative; /* add this to make ::before work */
+}
 
-      overflow-y: auto;
-    }
-
-
+.mobile-circle::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+  opacity: 0.6;
+  z-index: -1; /* put it behind the main element */
+}
 
   </style>
 </head>
@@ -164,7 +173,9 @@
     <p> <span class="text-overlay2">[ X ] CLOSE </span< /p>
         <h2>Pixelated Perlin Noise Metal Stone Surface</h2>
 
-        <p>Eternal Variance: A Study in Perlin Noise</p>
+        <h3>Eternal Variance: A Study in Perlin Noise</h3>
+
+        <i>New Random World for StereoScopic Visuals on every reload of this page. </i>
 
         <p>In this immersive installation, we invite you to experience the mesmerizing beauty of Perlin noise, a
           pioneering algorithm that has been generating natural-looking patterns and textures for decades.</p>
@@ -194,7 +205,7 @@
 
 
   </div>
-  <a class="download-link" id="download-link">[ DOWNLOAD ]</a>
+  <a class="download-link" id="download-link">[ DOWNLOAD CSS INC. MIME IMG DATA ]</a>
   <div class="noise-background">
     <!-- Perlin noise pattern will be generated here -->
   </div>
@@ -213,10 +224,24 @@
           r = base + Math.floor(Math.random() * 3) - 4;
           g = base + Math.floor(Math.random() * 5) - 4;
           b = base + Math.floor(Math.random() * 7) - 4;
+
+
+
+          /*
+          
+          
+          bissare stereoscopics
+          
+          r = 1 + Math.floor(Math.random() * 255) - 4;
+          g = 1 + Math.floor(Math.random() * 255) - 4;
+          b = 1 + Math.floor(Math.random() * 255) - 4;*/
+
+
           a = Math.floor(Math.random() * 256);
           a = a * (a / (a * a));
           a = Math.min(50, a);
           a = Math.max(150, a);
+          // color = `rgba(${r}, ${g}, ${b}, ${a / 255})`;
           color = `rgba(${r}, ${g}, ${b}, ${a / 255})`;
           ctx.fillStyle = color;
           ctx.fillRect(x, y, 1, 1);
@@ -258,8 +283,15 @@
     height = 21;
     numLayers = 3;
     noiseDataURLs = Array(numLayers).fill(0).map(() => gmNoise(width, height));
-
+    noiseBackground = document.querySelector(".noise-background");
     document.addEventListener('click', () => {
+      noiseBackground.style.transition = "opacity 0.02s";
+        noiseBackground.style.opacity = 0;
+        setTimeout(function () {
+          noiseBackground.style.transition = "opacity 0.92s";
+          noiseBackground.style.opacity = 1;
+        }, 90);
+
       noiseDataURLs.forEach((_, i) => {
         noiseDataURLs[i] = gmNoise(width, height);
       });
@@ -291,7 +323,7 @@
     document.addEventListener("DOMContentLoaded", function () {
       var textOverlay = document.querySelector(".text-overlay");
       var closeSpan = document.querySelector(".text-overlay2");
-      var noiseBackground = document.querySelector(".noise-background");
+      
 
       // Auto-click on noise background
       setTimeout(function () {
@@ -321,12 +353,16 @@
       if (window.innerWidth < 768) {
         mobileCircle.innerHTML = "MADE AS DEV TOOOL FOR DEKSTOP. Please rotate your device to horizontal orientation for the best experience.";
         document.body.appendChild(mobileCircle);
+        mobileCircle.style.transition = "opacity 4.2s";
         setTimeout(function () {
           mobileCircle.style.opacity = 1;
-        }, 1000);
+        }, 10);
         setTimeout(function () {
           mobileCircle.style.opacity = 0;
-        }, 3000);
+          setTimeout(function () {
+            mobileCircle.style.display = "none";
+          }, 4200);
+        }, 2282);
       }
 
       noiseBackground.style.opacity = 0;
@@ -335,13 +371,7 @@
         noiseBackground.style.opacity = 1;
       }, 100);
 
-      document.addEventListener("click", function () {
-        noiseBackground.style.transition = "opacity 0.5s";
-        noiseBackground.style.opacity = 0;
-        setTimeout(function () {
-          noiseBackground.style.opacity = 1;
-        }, 500);
-      });
+
     });
 
 
