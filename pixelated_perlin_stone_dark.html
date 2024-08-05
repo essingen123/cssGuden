@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- (autrhor-ity:) kilian lindberg; perlin noise mime thing data randomness pattern -->
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Perlin Noise Metal Surface</title>
+  <style>
+   
+
+    /* Global styles */
+    body {
+      margin: 0;
+      background-color: #000000;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      box-sizing: border-box;
+      text-align: justify;
+      transition: all 0.3s ease;
+      font: 200 16px/1 'Merriweather', serif;
+      color: #ffffff;
+      text-shadow: 0 -1px 3px rgba(37, 34, 26, 0.573), 0 -3px 8px rgba(37, 34, 26, 0.25), 0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.3);
+      opacity: 0.98;
+      clip-path: none;
+      overflow: none;
+
+    }
+
+    .noise-background {
+      background-color: #000000;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      image-rendering: pixelated;
+    }
+
+    .text-overlay {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: inline-grid;
+      justify-content: left;
+      align-items: center;
+      color: #fff;
+      font: 24px / 1 serif;
+      text-align: justify;
+      padding: 5rem;
+      margin: 2rem 0 6rem;
+      max-width: 35rem;
+      background-color: #30303099;
+      border-radius: 2rem;
+      font-variant: petite-caps;
+      z-index: 2;
+      grid-column-gap: 0;
+      grid-row-gap: 2px;
+      grid-auto-rows: min-content;
+      margin: 2rem;
+      padding: 4rem;
+      height: fit-content;
+      top: 8rem;
+    }
+
+    .download-link {
+      position: absolute;
+      top: 80px;
+      right: 80px;
+      padding: 1rem;
+      margin: 1rem;
+      color: #fff;
+      text-decoration: underline;
+      cursor: pointer;
+      z-index: 800;
+    }
+
+
+
+    .noise-container {
+      position: relative;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .text-overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      color: #fff;
+      font-size: 18px;
+      text-align: center;
+      padding: 2rem;
+      background-color: rgba(0, 0, 0, 0.5);
+
+
+      background-color: rgba(0, 0, 0, 0.5);
+      display: inline-grid;
+      height: fit-content;
+      text-align: justify;
+    }
+
+    .noise-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      image-rendering: pixelated;
+    }
+
+    .download-link {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      padding: 0.5rem;
+      margin: 0.5rem;
+      color: #fff;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+
+
+
+
+
+    * {
+      font-family: Georgia, 'Times New Roman', Times, serif;
+
+    }
+
+    .mobile-circle {
+      text-align: center;
+      padding: 30px;
+      background-color: #fff !important;
+      color: #000 !important;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      overflow: hidden;
+      font-size: large;
+
+      overflow-y: auto;
+    }
+
+
+
+  </style>
+</head>
+
+<body>
+  <div class="text-overlay">
+    <p> <span class="text-overlay2">[ X ] CLOSE </span< /p>
+        <h2>Pixelated Perlin Noise Metal Stone Surface</h2>
+
+        <p>Eternal Variance: A Study in Perlin Noise</p>
+
+        <p>In this immersive installation, we invite you to experience the mesmerizing beauty of Perlin noise, a
+          pioneering algorithm that has been generating natural-looking patterns and textures for decades.</p>
+
+        <p>Developed by Ken Perlin in the 1980s, this technique has been used to create realistic environments and
+          special effects in film and video games. But here, we present it as a work of art in its own right – a
+          dynamic, ever-changing tapestry of pixels that evoke the infinite variability of the natural world.</p>
+
+        <p>Infinite Pattern, Finite Space</p>
+
+        <p>Despite its compact digital footprint, this installation holds the potential for eternal variance. Each
+          iteration of the algorithm produces a unique, intricate pattern that defies repetition. And yet, within this
+          boundless diversity, a strange harmony emerges – a testament to the underlying order that governs the
+          universe.</p>
+
+        <p>Download and Unleash the Variance</p>
+
+        <p>Take a piece of this eternal variance home with you. Our downloadable file contains the seed of this
+          installation, waiting to be unleashed on your own device. Witness the infinite possibilities unfold before
+          your eyes, as the algorithm generates new patterns and textures in real-time.</p>
+
+        <p>Experience the Emergence</p>
+
+        <p>Step into the world of Perlin noise, where the boundaries between art and science blur. Let the hypnotic
+          rhythms of this installation wash over you, and discover the beauty that lies at the intersection of chaos and
+          order.</p>
+
+
+  </div>
+  <a class="download-link" id="download-link">[ DOWNLOAD ]</a>
+  <div class="noise-background">
+    <!-- Perlin noise pattern will be generated here -->
+  </div>
+
+  <script>
+    gmNoise = (w, h) => {
+      canvas = document.createElement('canvas');
+      canvas.width = w;
+      canvas.height = h;
+      ctx = canvas.getContext('2d');
+      imageData = ctx.createImageData(w, h);
+
+      for (let y = 0; y < h; y++) {
+        for (let x = 0; x < w; x++) {
+          base = Math.floor(Math.random() * 64) + 64;
+          r = base + Math.floor(Math.random() * 3) - 4;
+          g = base + Math.floor(Math.random() * 5) - 4;
+          b = base + Math.floor(Math.random() * 7) - 4;
+          a = Math.floor(Math.random() * 256);
+          a = a * (a / (a * a));
+          a = Math.min(50, a);
+          a = Math.max(150, a);
+          color = `rgba(${r}, ${g}, ${b}, ${a / 255})`;
+          ctx.fillStyle = color;
+          ctx.fillRect(x, y, 1, 1);
+        }
+      }
+
+      return canvas.toDataURL('image/png');
+    };
+
+    scrmPrms = (primes) => {
+      for (let i = primes.length - 1; i > 0; i--) {
+        j = Math.floor(Math.random() * (i + 1));
+        [primes[i], primes[j]] = [primes[j], primes[i]];
+      }
+      return primes;
+    };
+
+    getPrimes = (limit) => {
+      primes = [];
+      for (let i = 2; i <= limit; i++) {
+        let isPrime = true;
+        for (let j = 2; j * j <= i; j++) {
+          if (i % j === 0) {
+            isPrime = false;
+            break;
+          }
+        }
+        if (isPrime) {
+          primes.push(i);
+        }
+      }
+      return primes;
+    };
+
+    primes = getPrimes(33);
+    primes = scrmPrms(primes);
+
+    width = 17;
+    height = 21;
+    numLayers = 3;
+    noiseDataURLs = Array(numLayers).fill(0).map(() => gmNoise(width, height));
+
+    document.addEventListener('click', () => {
+      noiseDataURLs.forEach((_, i) => {
+        noiseDataURLs[i] = gmNoise(width, height);
+      });
+      backgroundImage = `linear-gradient(45deg, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.4) 100%), `;
+      backgroundSize = `100% 100%, `;
+      noiseDataURLs.forEach((url, i) => {
+        backgroundImage += `url(${url})${i < numLayers - 1 ? ', ' : ''}`;
+        size = Math.round(2 * 2 * primes[i] * width / 100);
+        backgroundSize += `${size}% ${size}%${i < numLayers - 1 ? ', ' : ''}`;
+      });
+      document.styleSheets[0].rules[1].style.backgroundImage = backgroundImage;
+      document.styleSheets[0].rules[1].style.backgroundSize = backgroundSize;
+    });
+
+    document.getElementById('download-link').addEventListener('click', () => {
+      css = `.noise-background { background-image: ${backgroundImage}; background-size: ${backgroundSize}; }`;
+      blob = new Blob([css], { type: 'text/css' });
+      link = document.createElement('a');
+      link.href = URL.createObjectURL(blob);
+      link.download = 'perlin_noise_metal_surface.css';
+      link.click();
+    });
+
+
+
+
+
+
+    document.addEventListener("DOMContentLoaded", function () {
+      var textOverlay = document.querySelector(".text-overlay");
+      var closeSpan = document.querySelector(".text-overlay2");
+      var noiseBackground = document.querySelector(".noise-background");
+
+      // Auto-click on noise background
+      setTimeout(function () {
+        noiseBackground.click();
+      }, 200);
+
+
+      closeSpan.style.cursor = "pointer";
+
+      closeSpan.onclick = function () {
+        textOverlay.style.opacity = 0;
+      };
+
+
+      var mobileCircle = document.createElement("div");
+      mobileCircle.className = "mobile-circle";
+      mobileCircle.style.position = "absolute";
+      mobileCircle.style.top = "50%";
+      mobileCircle.style.left = "50%";
+      mobileCircle.style.transform = "translate(-50%, -50%)";
+      mobileCircle.style.width = "320px";
+      mobileCircle.style.height = "320px";
+      mobileCircle.style.background = "rgba(0,0,0,0.5)";
+      mobileCircle.style.borderRadius = "50%";
+      mobileCircle.style.zIndex = "302";
+
+      if (window.innerWidth < 768) {
+        mobileCircle.innerHTML = "MADE AS DEV TOOOL FOR DEKSTOP. Please rotate your device to horizontal orientation for the best experience.";
+        document.body.appendChild(mobileCircle);
+        setTimeout(function () {
+          mobileCircle.style.opacity = 1;
+        }, 1000);
+        setTimeout(function () {
+          mobileCircle.style.opacity = 0;
+        }, 3000);
+      }
+
+      noiseBackground.style.opacity = 0;
+      setTimeout(function () {
+        noiseBackground.style.transition = "opacity 0.5s";
+        noiseBackground.style.opacity = 1;
+      }, 100);
+
+      document.addEventListener("click", function () {
+        noiseBackground.style.transition = "opacity 0.5s";
+        noiseBackground.style.opacity = 0;
+        setTimeout(function () {
+          noiseBackground.style.opacity = 1;
+        }, 500);
+      });
+    });
+
+
+  </script>
+</body>
+
+</html>

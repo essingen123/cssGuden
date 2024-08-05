@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>2D Perlin Noise</title>
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      background-color: #333;
+    }
+
+    /* Noise background styles */
+    .noise-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-size: 128px 128px;
+      background-repeat: repeat;
+      color: #fff;
+      font-size: 24px;
+      text-align: center;
+      padding-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="noise-background">
+    PERLIN NOISE GEN IMAGE
+  </div>
+
+  <style>
+    /* Global styles */
+    body {
+      margin: 0;
+      background-color: #333;
+    }
+
+    /* genimg background styles */
+    .genimg-background {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      background-size: repeat;
+
+
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-size: 128px 128px;
+    background-repeat: repeat;
+    color: #fff;
+    font-size: 24px;
+    text-align: center;
+    padding-top: 20px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    }
+  </style>
+</head>
+<body>
+    
+<div class="genimg-background">
+  PERLIN NOISE GEN IMAGE
+</div>
+  <script>
+    function generategenimg(width, height) {
+      const canvas = document.createElement('canvas');
+      canvas.width = width;
+      canvas.height = height;
+      const ctx = canvas.getContext('2d');
+
+      for (let y = 0; y < height; y++) {
+        for (let x = 0; x < width; x++) {
+          ctx.fillStyle = (x + y) % 2 === 0 ? '#fff' : '#000';
+          ctx.fillRect(x, y, 1, 1);
+        }
+      }
+
+      return canvas.toDataURL('image/png');
+    }
+
+    const genimgDataURL = generategenimg(128, 128);
+    const genimgBackground = document.querySelector('.genimg-background');
+    genimgBackground.style.backgroundImage = `url(${genimgDataURL})`;
+  </script>
+</body>
+</html>
