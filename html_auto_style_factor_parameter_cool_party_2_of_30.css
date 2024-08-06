@@ -570,7 +570,7 @@ hr::after {
       transform: scale(50%);
   }
   *,html,body {
-    font-size: large;
+    /* font-size: large; */
   }
   body * {
     /* padding-left: 46px;
