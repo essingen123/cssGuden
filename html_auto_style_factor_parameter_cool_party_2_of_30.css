@@ -32,12 +32,15 @@ body {
   text-shadow: 0 -1px 2px rgba(37, 34, 26, 0.025), 0 -3px 8px rgba(37, 34, 26, 0.25), 0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.3);
 
   text-shadow: 0 -1px 3px rgba(37, 34, 26, 0.573), 0 -3px 8px rgba(37, 34, 26, 0.25), 0 -1px 8px rgba(37, 34, 26, 0.07), 0 -1px 1px rgba(37, 34, 26, 0.3);
-  opacity: 0.98;
+  /* opacity: 0.98; */
+  opacity: 1;
   font-weight: 200;
   clip-path: none;
   overflow: visible;
 }
-
+body {
+  opacity: 0.98;
+}
 h1,
 h2,
 h3 {
@@ -587,7 +590,7 @@ hr::after {
 @media screen and (max-width: 1199px) {
   body {
     column-count: 1;
-    margin: -10px;
+    margin: -6px;
   }
 
   *,
