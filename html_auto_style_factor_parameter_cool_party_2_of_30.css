@@ -365,9 +365,9 @@ body::before {
   }
 }
 
-@keyframes shimmer2 {
+/* @keyframes shimmer2 {
   0% {
-    opacity: 0.85;
+    opacity: 1;
   }
 
   10% {
@@ -377,11 +377,11 @@ body::before {
   100% {
     opacity: 0.85;
   }
-}
+} */
 
 @keyframes border-rotate2 {
   1% {
-    border-image-source: linear-gradient(-359, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF);
+    border-image-source: linear-gradient(361deg, #ab087f44, #b6aa8555, #2196F3AA, #03a8f4CC, #4CAF50BB, #FF9800DD, #FFC107EE, #8BC34AFF, #9C27B0FF, #03A9F4FF);
   }
 
   50% {
