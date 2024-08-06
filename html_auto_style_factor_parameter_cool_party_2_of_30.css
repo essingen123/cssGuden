@@ -635,7 +635,7 @@ center::before {
   background-size: 100% 100%, 7% 0.5%, 3% 11%, 7% 17%;
 }
 
-body {}
+
 
 body {
   /* display: inline-grid;
@@ -656,7 +656,6 @@ h3 {
 }
 
 
-    margin-left: -15px !important;
 
 ol {
   /* padding: 0px; */
