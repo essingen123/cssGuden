@@ -119,12 +119,16 @@ center img {
   width: 100%;
   max-width: 100%;
   transform-origin: center;
+  /* margin-left: -15px !important; */
 
   transform: translateX(0) rotate(10deg);
   overflow: auto;
   padding: 12px;
+  margin: -12px;
+  margin-bottom: 12px !important;
   border: 2px #88888822 solid;
-
+box-sizing: border-box;
+max-width: calc(100% - 32px);
 }
 
 center:nth-of-type(2)>img {
@@ -596,7 +600,8 @@ hr::after {
   *,
   html,
   body {
-    font-size: 1.05rem;
+    /* font-size: 1.05rem; */
+font-size: 1rem;
   }
 
   body {
@@ -651,7 +656,7 @@ h3 {
 }
 
 
-
+    margin-left: -15px !important;
 
 ol {
   /* padding: 0px; */
