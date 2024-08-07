@@ -22,7 +22,7 @@ body {
   box-shadow: 0 10px 50px rgba(51, 0, 0, 0.2);
   position: relative;
   background: linear-gradient(135deg, #f4f4f4, #e0e0e0);
-  transition: all 0.3s ease;
+  transition: all 2.9s cubic-bezier(0.4895, 0.03, 0.685, 0.22)
 
 }
 
@@ -630,6 +630,7 @@ font-size: 1rem;
     transform: rotate3d(-.2, -1.4, 21.2, 349deg);
     letter-spacing: 3px;
     word-spacing: 10px;
+  
   }
 }
 
