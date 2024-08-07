@@ -33,12 +33,28 @@
         "documentation": {}
     },
     {
-        "label": "sys",
+        "label": "A_1_run_me_main_start",
         "kind": 6,
         "isExtraImport": true,
-        "importPath": "sys",
-        "description": "sys",
-        "detail": "sys",
+        "importPath": "A_1_run_me_main_start",
+        "description": "A_1_run_me_main_start",
+        "detail": "A_1_run_me_main_start",
+        "documentation": {}
+    },
+    {
+        "label": "main_x",
+        "importPath": "A_1_run_me_main_start",
+        "description": "A_1_run_me_main_start",
+        "isExtraImport": true,
+        "detail": "A_1_run_me_main_start",
+        "documentation": {}
+    },
+    {
+        "label": "start_server_local",
+        "importPath": "ba0_local_server_port_seeker",
+        "description": "ba0_local_server_port_seeker",
+        "isExtraImport": true,
+        "detail": "ba0_local_server_port_seeker",
         "documentation": {}
     },
     {
@@ -66,6 +82,15 @@
         "importPath": "socket",
         "description": "socket",
         "detail": "socket",
+        "documentation": {}
+    },
+    {
+        "label": "sys",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "sys",
+        "description": "sys",
+        "detail": "sys",
         "documentation": {}
     },
     {
@@ -150,6 +175,33 @@
         "documentation": {}
     },
     {
+        "label": "main_x",
+        "kind": 2,
+        "importPath": "A_1_run_me_main_start",
+        "description": "A_1_run_me_main_start",
+        "peekOfCode": "def main_x():\n    start_server_local()\nmain_x()",
+        "detail": "A_1_run_me_main_start",
+        "documentation": {}
+    },
+    {
+        "label": "start_server_local",
+        "kind": 2,
+        "importPath": "ba0_local_server_port_seeker",
+        "description": "ba0_local_server_port_seeker",
+        "peekOfCode": "def start_server_local():\n    PORT = 8082  # Start from this port\n    # Find a free port\n    while True:\n        try:\n            sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n            sock.settimeout(1)\n            print(f\"Trying port: {PORT}\")\n            print(f\"Found free port: {PORT}\")\n            sock.close()  # Close the socket",
+        "detail": "ba0_local_server_port_seeker",
+        "documentation": {}
+    },
+    {
+        "label": "main",
+        "kind": 2,
+        "importPath": "ba0_local_server_port_seeker",
+        "description": "ba0_local_server_port_seeker",
+        "peekOfCode": "def main():\n    start_server_local()\nif __name__ == \"__main__\":\n    main()",
+        "detail": "ba0_local_server_port_seeker",
+        "documentation": {}
+    },
+    {
         "label": "delete_duplicates",
         "kind": 2,
         "importPath": "ba1_duplicate_deleter",
@@ -201,24 +253,6 @@
         "description": "ba4_readme_text_gen_here",
         "peekOfCode": "readme_content = \"\"\"\n# AutoChic CSS: The Ultimate CSS Library for Any Web Application\n==============================================================\n## Design Process\n---------------\nWhen designing AutoChic CSS, we asked ourselves:\n### Who is our target audience?\nWeb developers, designers, and anyone looking to create a visually appealing web application.\n### What are their needs and pain points?\nA easy-to-use CSS library that can help them create a modern and responsive design without having to start from scratch.",
         "detail": "ba4_readme_text_gen_here",
-        "documentation": {}
-    },
-    {
-        "label": "PORT",
-        "kind": 5,
-        "importPath": "local_server",
-        "description": "local_server",
-        "peekOfCode": "PORT = 8082  # Start from this port\n# Find a free port\nwhile True:\n    try:\n        sock = socket.socket(socket.AF_INET, socket.SOCK_STREAM)\n        sock.settimeout(1)\n        print(f\"Trying port: {PORT}\")\n        print(f\"Found free port: {PORT}\")\n        sock.close()  # Close the socket\n        break",
-        "detail": "local_server",
-        "documentation": {}
-    },
-    {
-        "label": "httpd",
-        "kind": 5,
-        "importPath": "local_server",
-        "description": "local_server",
-        "peekOfCode": "httpd = http.server.HTTPServer((\"\", PORT), http.server.SimpleHTTPRequestHandler)\nprint(f\"Server started on port {PORT}\")\n# Open the browser to the server\nwebbrowser.open(f\"http://localhost:{PORT}\")\n# Keep the server running\nhttpd.serve_forever()",
-        "detail": "local_server",
         "documentation": {}
     }
 ]

@@ -556,6 +556,9 @@ hr {
   position: relative;
   border-color: rgba(204, 204, 204, 0.1);
   contain: content;
+  border: 1px solid rgba(204, 204, 204, 0.1);
+  border-width: 1px 0 0 0;
+  
 }
 
 center {
