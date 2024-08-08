@@ -2,10 +2,8 @@
 
 readme_content = """
 # AutoChic CSS: The Ultimate CSS Library for Any Web Application
-==============================================================
 
 ## Design Process
----------------
 
 When designing AutoChic CSS, we asked ourselves:
 
@@ -26,7 +24,6 @@ Modular and flexible design, responsive design, and a focus on user experience.
 By providing a comprehensive and modular CSS architecture, pre-designed components and layouts, and a focus on ease of use and customization.
 
 ## Design Principles
-------------------
 
 ### Create a visually appealing and modern design that enhances the user experience
 
@@ -35,7 +32,6 @@ By providing a comprehensive and modular CSS architecture, pre-designed componen
 ### Focus on simplicity and ease of use, while still providing advanced features and functionality
 
 ## Features
----------
 
 ### Responsive design for various screen sizes and devices
 

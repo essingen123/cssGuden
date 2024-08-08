@@ -1,8 +1,10 @@
-# 🎉 cssGuden AutoChic CSS: The Ultimate CSS Library for Any Web Application 🚀
+<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" style="width: 30%; margin: 0 auto; display: block;">
+
+# 🎉 cssGuden autoChic CSS: The Ultimate CSS Library for Any Web Application 🚀
 
 ## 🤔 Design Process
 
-When designing AutoChic CSS, we asked ourselves:
+When designing autoChic CSS, we asked ourselves:
 
 ### 👥 Who is our target audience?
 
@@ -35,11 +37,11 @@ By providing a comprehensive and modular CSS architecture, pre-designed componen
 
 ## 🚀 Getting Started
 
-1. **Link the AutoChic CSS file to your HTML document** 📁
+1. **Link the autoChic CSS file to your HTML document** 📁
 2. **Start building your web page using the provided components and layouts** 🏗️
 3. **Customize the styles to fit your needs using the modular CSS architecture** 🔩
 
-## 👥 Contributing to AutoChic CSS
+## 👥 Contributing to autoChic CSS
 
 If you'd like to contribute to the library, please follow these guidelines:
 
@@ -50,20 +52,21 @@ If you'd like to contribute to the library, please follow these guidelines:
 
 ## 📜 License and Attribution
 
-AutoChic CSS is licensed under the MIT License 📜
+autoChic CSS is licensed under the MIT License 📜
 
-Attribution is not required but appreciated. If you use AutoChic CSS in your project, please consider giving credit to the original authors 🙏
+Attribution is not required but appreciated. If you use autoChic CSS in your project, please consider giving credit to the original authors 🙏
 
 ## 📈 Version History
 
-v1.0: Initial release of AutoChic CSS aka cssGuden 🎉
+v1.0: Initial release of autoChic CSS aka cssGuden 🎉
 
-<br clear="left">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_2.jpg" style="width: 30%; margin: 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_17.jpg" style="width: 30%; margin: 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_9.jpg" style="width: 30%; margin: 1%; float: left;">
-<br clear="left">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_3.jpg" style="width: 30%; margin: 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" style="width: 30%; margin: 1%; float: left;">
-<img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_11.jpg" style="width: 30%; margin: 1%; float: left;">
-<br clear="left">
+<center>
+  <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_2.jpg" alt="Party Toad Sticker 2" style="width: 30%; margin: 1%; display: inline-block;">
+  <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_17.jpg" alt="Party Toad Sticker 17" style="width: 30%; margin: 1%; display: inline-block;">
+  <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_9.jpg" alt="Party Toad Sticker 9" style="width: 30%; margin: 1%; display: inline-block;">
+</center>
+<center>
+  <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_3.jpg" alt="Party Toad Sticker 3" style="width: 30%; margin: 1%; display: inline-block;">
+  <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_14.jpg" alt="Party Toad Sticker 14" style="width: 30%; margin: 1%; display: inline-block;">
+  <img src="img_trunk_junk/party_toad_sticker_fun_fierce_image_photo_fancy_styler_gallery_party_a_11.jpg" alt="Party Toad Sticker 11" style="width: 30%; margin: 1%; display: inline-block;">
+</center>

@@ -373,3 +373,44 @@ h3 {
   grid-column: auto;
   grid-row: auto;
 }
+
+
+@keyframes border-rotate2 {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+body::before {
+  top: 32px;
+  left: -2px;
+  right: -2px;
+}
+
+body::before {
+
+  top: 42px;
+  left: -1px;
+  right: -1px;
+  animation: border-rotate2 12s cubic-bezier(1,0,0,1) alternate infinite;
+  border-radius: 142px;
+}
+
+@keyframes border-rotate2 {
+  100% {
+    opacity: 0.5;
+  }
+  0% {
+    opacity: 0.5;
+  }
+}
+
+body {
+  box-shadow: 0 10px 150px rgba(234, 128, 242, 0.53), 0 13px 17px rgba(9, 2, 19, 0.72);
+}
