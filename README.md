@@ -1,7 +1,6 @@
 # 🎉 cssGuden AutoChic CSS: The Ultimate CSS Library for Any Web Application 🚀
 
 ## 🤔 Design Process
----------------
 
 When designing AutoChic CSS, we asked ourselves:
 
@@ -22,14 +21,12 @@ Modular and flexible design, responsive design, and a focus on user experience �
 By providing a comprehensive and modular CSS architecture, pre-designed components and layouts, and a focus on ease of use and customization 🔩
 
 ## 📜 Design Principles
-------------------
 
 - Create a visually appealing and modern design that enhances the user experience 🌈
 - Use a modular and flexible approach to make the library easy to customize and extend 🤝
 - Focus on simplicity and ease of use, while still providing advanced features and functionality 📈
 
 ## 🎁 Features
----------
 
 - Responsive design for various screen sizes and devices 📱
 - Modular CSS architecture for easy customization 🔧
@@ -37,14 +34,12 @@ By providing a comprehensive and modular CSS architecture, pre-designed componen
 - Easy to use and integrate into your web projects 💻
 
 ## 🚀 Getting Started
----------------
 
 1. **Link the AutoChic CSS file to your HTML document** 📁
 2. **Start building your web page using the provided components and layouts** 🏗️
 3. **Customize the styles to fit your needs using the modular CSS architecture** 🔩
 
 ## 👥 Contributing to AutoChic CSS
------------------------------
 
 If you'd like to contribute to the library, please follow these guidelines:
 
@@ -54,14 +49,12 @@ If you'd like to contribute to the library, please follow these guidelines:
 * **Submit a pull request for review and feedback** 📣
 
 ## 📜 License and Attribution
--------------------------
 
 AutoChic CSS is licensed under the MIT License 📜
 
 Attribution is not required but appreciated. If you use AutoChic CSS in your project, please consider giving credit to the original authors 🙏
 
 ## 📈 Version History
-----------------
 
 v1.0: Initial release of AutoChic CSS aka cssGuden 🎉
 
